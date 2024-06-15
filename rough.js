@@ -184,3 +184,50 @@ console.log(firstName.includes("e")); /// this will say true because we asked th
 // trim method 
 console.log(firstName.trim());
 
+// Template literal => working with back ticks 
+
+let desc = `this is some randome`
+// checking how it shows 
+console.log(desc)
+
+let descName = "Your name"
+let descSecond = "Dev Dev"
+let descFull = `${descName} ${descSecond} something`;
+// check how it shows 
+console.log(descFull);
+
+
+//challenge
+let myFavActorFn = "Jason"
+let myFavActorFs = "Statham"
+let favFullName = `${myFavActorFn} ${myFavActorFs}`;
+let UPPERCASE = favFullName.toUpperCase();
+let message = `My Fav account is ${UPPERCASE}, `
+message+= `A Handsome good looking man`
+// let favFullName = myFavActorFn.concat(myFavActorFs).toUpperCase();
+console.log(message);
+
+
+// Type conversion 
+// string to number
+let money = "90";
+// this also works 
+money = +money
+// now lets convert string to number with parseInt 
+money = parseInt(money)
+// now lets convert string to number with constructor Number   
+money = Number(money)
+
+console.log(money);
+
+// convert number to string 
+
+let moneyStr = "90.74574"
+// Converting
+moneyStr = moneyStr.toString()
+moneyStr = String(moneyStr)
+
+// Converting string to decimal
+//converting with parseFloat
+moneyStr = parseFloat(moneyStr)
+
