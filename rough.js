@@ -230,4 +230,137 @@ moneyStr = String(moneyStr)
 // Converting string to decimal
 //converting with parseFloat
 moneyStr = parseFloat(moneyStr)
+// conditional statements 
 
+let a = 20;
+let b = 40;
+
+    if (a > b) {
+        console.log('a is greather than b')
+        
+    } else if(a < b){
+        console.log('B is greather than a');
+    } else {
+        console.log("a is not equal to b");
+    }
+// you can write else if statment as long as you want if it making sense to you .. you need to end the statement with else condition though.
+
+let time = 12
+let greetings;
+if (10 < time) {
+    greetings = "Good Morning"
+    console.log(greetings);
+} else if(time < 20){
+    greetings ="Good afternoon"
+    console.log(greetings);
+} else{
+    greetings = "Good evening"
+    console.log(greetings);
+}
+
+
+// challenge
+// create variable name (password) store nothing.
+let password;
+// if password is equal to 8 print "Welcome"
+password ="12345678"
+if(password.length === 8){
+    console.log("Welcome");
+}else if(password.length < 8){
+    console.log("Password is too short");
+}else if(password.length > 8){
+    console.log("Password is too long ,password should be 8 charracters");
+} else{
+    console.log("Please provide a password");
+}
+// if password is less than 8 print "Password is too short"
+// if password is more than 8 print "Password is too long" & "password should be 8 charracters"
+
+
+// switch statements 
+let day = 2;
+switch (day) {
+    case 1:
+        console.log("Today is Monday");
+        break;
+    case 2:
+        console.log("Today is Tuesday");
+        break;
+    case 3:
+        console.log("Today is Wednesday");
+        break;
+    case 4:
+        console.log("Today is Thursday");
+        break;
+    case 5:
+        console.log("Today is Friday");
+        break;
+    case 6:
+        console.log("Today is Saturday");
+        break;
+    case 7:
+        console.log("Today is Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+        }
+// challenge 
+// create a variable name(fruit) & store "banana"
+let fruit = "banana";
+switch (fruit) {
+    case "banana":
+        console.log("Banana is good");
+        break;
+    case "apple":
+        console.log("Apple is good");
+        break;
+    case "orange":
+        console.log("Orange is good");
+        break;
+    case "tomato":
+        console.log("Tomato is good");
+        break;
+
+    default:
+        console.log("Invalid fruit");
+        break;
+}
+// for loop statment => dont repeat yourself . for (initialExpression; then condition; then express  )
+for (let i = 0; i <= 5; i++) {
+    console.log("Hello World!", i)
+}
+
+// Nested loop 
+for (let i = 0; i <= 5; i++) {
+    console.log("===Outer Loop===", i)
+    for (let j = 0; j <= 5; j++) {
+        console.log("Inner Loop", j)
+        }
+}
+
+// Loops Challenge
+// write your name from 0 t0 100
+for (let i = 0; i <= 100; i++) {
+    console.log("Hello World!", i)
+}
+// While (condition) statements
+
+
+let i = 1
+while (i <= 5) {
+    console.log("Hello World!", i)
+    i++;
+}
+// WhileLoops Challenge
+// write your name from 10 t0 100
+let f = 10
+while (f <= 100) {
+    console.log("Hello World!", f)
+    f++;
+}
+// do while loop
+let h = 1;
+do {
+    console.log("Do While",h)
+    h++;// do not forget this .. 
+} while (h <= 5);
