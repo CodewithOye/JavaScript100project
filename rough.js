@@ -364,3 +364,46 @@ do {
     console.log("Do While",h)
     h++;// do not forget this .. 
 } while (h <= 5);
+
+// Logical operators , in JavaScript we have 3 kind of logical operators
+// 1. Logical AND (&&) => TRUE if both the operands/boolean values are true , else to evaluares to FALSE
+// Examples of Logical AND && 
+const l = true
+const m = true
+const n = 4
+
+console.log(l && m)
+console.log(n > 2 &&  n < 2)
+// 2. Logical  OR || => TRUE if either operands/boolean values is true. Evaluate to false if both are false
+// Example 
+console.log(l || m)
+console.log(n > 2 ||  n < 2)
+// 3. Logical NOT (!) => True if the operands is false and vice-versa
+// Example
+console.log(!m)
+console.log(!l)
+
+// Another example to clear this 
+
+let password2 = "web-dev1290"
+if (password2.length >= 8 && password2.includes("web")) {
+    console.log("Valid password")
+}else{
+    console.log("Invalid Password")
+}
+
+// Arrays => Arrays are data structures which allow us to store collection of datas at once and also 0 index based
+// array 
+const numbers = [1,2,3,4,5,6,7,8]
+console.log(numbers[1])
+
+
+const fruitsStringArray = ["Mango", "Orange", "Apples"]
+// Accessing Array items
+console.log(fruitsStringArray[0])
+
+// Nested Array == also dimension array
+const nestedArray = [false ,[1,2,3], ["Mango", "Orange", "Apple"] ,true]
+console.log(nestedArray)
+// accessing two dimension array 
+console.log(nestedArray[1][1])
