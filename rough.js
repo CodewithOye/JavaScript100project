@@ -404,6 +404,61 @@ console.log(fruitsStringArray[0])
 
 // Nested Array == also dimension array
 const nestedArray = [false ,[1,2,3], ["Mango", "Orange", "Apple"] ,true]
-console.log(nestedArray)
+// console.log(nestedArray)
 // accessing two dimension array 
 console.log(nestedArray[1][1])
+//
+// challenge 
+// 1. Create array name(favSingers) store 3 fav singers .
+ const favSingers = ['Whitney', 'Tory', "21 Savage"]
+ //2. log the first singer in that array 
+ console.log(favSingers[0])
+ console.log(favSingers[1])
+ console.log(favSingers[2])
+ // 3. Create Array name (favNumbers) store 4 fav numbers
+ const favNumbers = [1,2,3,4]
+ // 4. Create arrya name (mixedArr) store mixed arrays 
+ const mixedArr = ['Name',["jason",21],76 , true ]
+ // .5 Now access each items in that array by using [] notation.
+ console.log(mixedArr[0])
+ console.log(mixedArr[1][0])
+ console.log(mixedArr[1][1])
+ console.log(mixedArr[2])
+ console.log(mixedArr[3])
+
+
+ // Push() array method === check readme files ..
+ const fruits =[
+    'mango',
+    'orange',
+    'pineapple',
+    'banana',
+    'grape'
+ ]
+ fruits.push("strawberry")
+ console.log(fruits)
+ // you can also check the number of fruits in the array by adding .length.
+ console.log(fruits.length)
+ // pop() methods ..this method only allow to remove the last items from array
+ fruits.pop('strawberry')
+ console.log(fruits)
+ // shift() methods ... only allow to remove first element from an array
+ fruits.shift("mango")
+ console.log(fruits)
+ // unshift() methods ... adds a new element to the beginning of an array and return the new length of the array;
+ fruits.unshift("mango")
+ console.log(fruits)
+ // concat() method allow us to add more than one to an array
+ const moreFruits = ['Tomato','lemon', 'blueberry', 'natjie', 'pear' ]
+ totalFruits = fruits.concat(moreFruits);
+ console.log(totalFruits)
+ // includes method check if an array contains a specific element;
+ console.log(moreFruits.includes("Tomato"))
+ // also join array 
+ console.log(fruits.join('-'))
+ // reverse method()
+ console.log(fruits.reverse())
+ // slice method()
+ console.log(fruits.slice(2,5)) // start from index 2 and end at index
+ // sort() method
+ console.log(fruits.sort()) // this re-arrange the fruits alphabetically // also works with number
