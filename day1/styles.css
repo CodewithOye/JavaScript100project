@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+span{
+    background: url("https://cdn2.iconfinder.com/data/icons/valentine-day-16/512/563_Heart_valentine_Love_hanging_valentine_valentines_day_love-1024.png");
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    position: absolute;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    animation: animate 0.3s linear;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateX(-50, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translateX(-50, -5000%);
+        opacity: 0;
+        filter: hue-rotate(860deg);
+    }
+    
+}
