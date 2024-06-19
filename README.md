@@ -1,5 +1,9 @@
 # JavaScript100project
 #concat()   ====> joins two or more arrays and return result;
+
+
+
+
 #includes()  ====> check if an array contains a specific element;
 #push()  ====> add a new element to the end of an array and return the new lenght of the array;
 #unshift() ===> adds a new element to the beginning of an array and return the new length of the array;
