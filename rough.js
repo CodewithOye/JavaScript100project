@@ -462,3 +462,5 @@ console.log(nestedArray[1][1])
  console.log(fruits.slice(2,5)) // start from index 2 and end at index
  // sort() method
  console.log(fruits.sort()) // this re-arrange the fruits alphabetically // also works with number
+
+ // Object method ==========>  An object literal is a list of property names:values inside curly braces {}.
