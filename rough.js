@@ -464,3 +464,49 @@ console.log(nestedArray[1][1])
  console.log(fruits.sort()) // this re-arrange the fruits alphabetically // also works with number
 
  // Object method ==========>  An object literal is a list of property names:values inside curly braces {}.
+
+const person = {
+    name: "John",
+    age: 30,
+    country: "USA",
+    isProgrammer: true,
+    hobbies: ["reading", "swimming", "hiking"],
+    address: {
+        street: "123 Main St",
+        city: "New York",
+        state: "NY",
+        zip: "10001"
+        }
+}
+// to add another value to object or array 
+person.hobbies.push("coding")
+person.lastName = 'Dev'
+// access any of the item with dot notation
+console.log(person.country)
+// access nested object
+console.log(person['address'])
+// or
+console.log(person)
+
+// challenges
+// 1. create a object name (car)
+// 2. add properties (color, model, year, owner)
+// 3. add a method (startEngine) that print out "Vroom Vroom"
+// 4. add another method (accelerate) that print out "Speeding up"
+const car = {
+    color: "red",
+    model: "Toyota",
+    year: 2020,
+    owner: "John",
+    startEngine: function(){
+        console.log("Vroom Vroom")
+        },
+        accelerate: function(){
+            console.log("Speeding up")
+            }
+         }
+
+        car.wheels = 4
+        console.log(car)
+
+     console.log(car.accelerate())
