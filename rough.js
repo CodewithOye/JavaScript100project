@@ -505,8 +505,121 @@ const car = {
             console.log("Speeding up")
             }
          }
+         
 
         car.wheels = 4
         console.log(car)
 
-     console.log(car.accelerate())
+
+
+
+// Function in JavaScript 
+// a FUnction is a block of code that performs a specific task.
+// Functions are used to perform certain actions, take parameters, return a value, and work similarly to
+// methods in object-oriented programming. Functions are one of the building blocks in JavaScript.
+// function makes athe program easier as each small task is divided into a function.
+// function is  DRY = Dont repeat yourself .
+// function is reusable and can be called multiple times.
+
+//  function declaration
+function greet(){
+    console.log("Hello World")
+}
+// calling the function
+greet()
+
+
+function sayHi(name){
+    console.log("Hello " + name)
+    // console.log(`Hello  ${name =" Yourname "}`)
+}
+
+sayHi("Your name");
+
+// return keyword in function
+
+function add(x,y) {
+    return x + y
+}
+// creating a variable to store the answer
+const res = add(30,80)
+//executing
+console.log(res);
+
+// create a function name(myfunction)
+// This function will take 2 params
+// Any number we pass as argument it will multiply that number
+// as argument pass your favourite numbers 
+// log the value
+
+function myFunction(a ,b){
+    return a * b ;
+
+}
+const myResult = myFunction(40,50)
+console.log(myResult)
+
+// Function Declaration
+function sayHi(name){
+    console.log(`Hello  ${name}`)
+}
+sayHi("Your name")
+
+// Function Expression
+const greet1 = function(user) {
+    console.log(`Hello ${user}`)
+    
+}
+greet1("Doe")
+
+
+
+// When we provide function as an argument to the other function that function is known as callback function
+function showCallFunc(fn){
+    const value = 30;
+    fn(value)
+}
+showCallFunc(function(value){
+    console.log(value)
+
+})
+//example one
+
+function greetMe(name,cb){
+    console.log(`Hello ${name}`)
+    cb()
+}
+function cb(){
+    console.log("I am a callback function")
+    }
+
+greetMe("John Doe",cb)
+
+// Example 2
+
+function greetMe(name,cb){
+    console.log(`Hello ${name}`)
+    cb()
+}
+
+
+greetMe("John Doe",function cb(){
+    console.log("I am a callback function")
+    })
+
+
+
+// create a function name showCallfunc
+// pass fn as a parameter
+// inside that function , create a varibale which holds the value of 10
+// oass that valueu to the callback function
+// now create a callback function & print the value which you will pass as a parameter to the callback func
+
+function showCallFunc2(fn){
+    const value = 50;
+    fn(value)
+}
+showCallFunc2(function(value){
+    console.log(value)
+})
+
