@@ -499,16 +499,18 @@ const car = {
     year: 2020,
     owner: "John",
     startEngine: function(){
-        console.log("Vroom Vroom")
+        return ("Vroom Vroom")
         },
         accelerate: function(){
-            console.log("Speeding up")
+            return ("Speeding up")
             }
          }
          
 
         car.wheels = 4
-        console.log(car)
+        // console.log(car)
+        console.log(car.accelerate())
+        
 
 
 
@@ -622,4 +624,294 @@ function showCallFunc2(fn){
 showCallFunc2(function(value){
     console.log(value)
 })
+
+// Scope in JavaScript refers to the current context of the code , which determines the accessibility of the variables in javaScript
+
+// There are two types of scopes in JavaScript.
+
+// Global Scope variables are those declared outside of a block.
+
+// Local Scope variables are those declared inside of a block.
+
+let textMessage = "Hi" // Global variable
+console.log(textMessage)
+
+function showMessage(){
+    let textMessage = "Hello" // local variable
+    console.log(textMessage)
+}
+showMessage()
+
+// exampple
+
+// function greetInfo(){
+//     return `Hello, my name is ${personn.name} & i am ${personn.age} years old.`
+// }
+
+// const personn ={
+//     name : "John Doe",
+//     age : 30,
+//     greetInfo,
+// }
+
+// console.log(personn.greetInfo())
+
+// another logical example;
+
+
+
+const personn ={
+    name : "John Doe",
+    age : 30,
+    greetInfo:function greetInfo(){
+        return `Hello, my name is ${personn.name} & i am ${personn.age} years old.`
+    },
+}
+
+console.log(personn.greetInfo())
+
+
+// JSON stands for JavaScript Object Notation. It is a lightweight, text-based data interchange format that is easy to read and write. JSON is a standard format for exchanging data between web servers, web applications, and mobile apps.
+
+//JSON is often used to transmit data between a server and a web application, or between different microservices in a distributed system. It is a popular choice for data exchange because it is:
+
+// Human-readable: JSON data is easy to understand and work with, even for non-technical users.
+// Platform-independent: JSON can be used on any platform, including Windows, macOS, and Linux.
+// Language-independent: JSON can be used with any programming language, including JavaScript, Python, Java, and many others.
+
+const personnn = {
+    name:"John",
+    age:30,
+    isSubscribe:true,
+    isMarried:true,
+    children:false,
+    cars:{
+        "car1":"BMW",
+        "car2":"Audi"
+    },
+    pets:true,
+    address:{
+        street:"123 Main Street",
+        city:"New York"
+
+
+    }
+
+}
+console.log(personnn) // Object 
+const jsonString = JSON.stringify(personnn) // JSON conversion
+console.log(jsonString)
+
+// reverting back to object
+const parsedObj= JSON.parse(jsonString)
+console.log(parsedObj)
+
+// dates and time 
+let  date = new Date()
+console.log(date)
+// passing specific values to the date , year , month, day , hour , minutes , seconds , milliseconds
+// date = new Date(2024, 5,10,12,30,0,0)
+console.log(date)
+//exttracting data from Date 
+
+const year = date.getFullYear()
+const month = date.getMonth()
+const days = date.getDay()
+
+console.log(`Year: ${year}`)
+console.log(`Month: ${month}`)
+console.log(`day: ${days}`)
+
+console.log(date.toDateString())
+console.log(date.toISOString())
+console.log(date.toLocaleDateString())
+console.log(date.toLocaleString())
+console.log(date.toLocaleTimeString())
+
+
+// to increase date 
+date.setDate(date.getDate() + 90)
+console.log(date)
+// to decrease date 
+date.setDate(date.getDate() - 90)
+console.log(date)
+
+// SetInterval
+
+setInterval(()=> {
+    console.log("Hello World, This function will be executed every 2secs")
+},2000)
+
+// setTimeOut
+
+setTimeout(() => {
+    console.log("This function will be executed after 3secs")
+},3000)
+
+// clearInverval
+
+const interValid = setInterval(()=> {
+    console.log("Hello World, This function will be executed every 1secs")
+},1000)
+
+setTimeout(()=> {
+    clearInterval(interValid)
+    console.log("interval Stopped")
+},10000)
+
+// Template strings , also know as template literals,
+// are a feature in JavaScript that allows you to create a string with 
+//embedded expressions, They are denoted by backticks `` instead of single or
+// double quotes. Template strings provide a more flexible and conscise way to construct strings 
+//, especially when they involve a variables or expressions.
+console.log(`${4 + 4}`)
+console.log(`This is template literal  
+                                      I m sure you got it now `)
+const fName ="Dev"
+const lName="Oye"
+console.log(`${fName} ${lName}`) // template literal
+console.log(`${ ['One','Two','Three',4 ,5, 'six'] }`) // Array in Template literal
+console.log(fName + " " + lName) // with traditional double or single quotes 
+
+function info(){
+    return "This function will be called inside Template literal"
+}
+console.log(`${info()}`) // execution
+
+// Arrow functions, also know as fat arrow functions,
+// are a concise and shorter way to define functions in JavaScript . 
+// They were introduced in ES6  and provide a more compact syntax compared
+//  to traditional function expressions
+
+const greetingArrow = (username)=> {
+    return `Hello ${username}!`
+}
+console.log(greetingArrow("Dev")) // execution
+
+// Another example
+
+// open and close bracket is needed for more than one parameter with curly braces if its not one line code
+greetingArrow2 = username => `Hello ${username}!`;
+
+console.log(greetingArrow2("Dev"))
+
+// Another example with one line return 
+const multi = n => n * 5;
+
+console.log(multi(3))
+// time out challenge
+
+setTimeout(()=> {
+    console.log("Hello World")
+    setTimeout(()=> {
+        console.log("Hello Dev")
+        setTimeout(()=>{
+            console.log("Hello Oye")
+            setTimeout(()=> {
+                console.log("Hello Nomsa")
+                setTimeout(()=> {
+                    console.log("Hello BoyBoy")
+                },2000)
+            },2000)
+        },2000)
+    },2000)
+},2000)
+
+// Enhanced object literals, introduced in ECMAScript 6 (ES6), 
+// are a set of enhancements to the syntax for defining object in javaScript ,
+// thise enhancements make it more convenient and concise to define object properties sand methods.
+
+
+function user(name,age,work){
+    return {
+        name,
+        age,
+        work,
+        intro(){
+            console.log(`My name is ${name} & i am ${age} , work as a ${work}`)
+        }
+    };
+}
+
+const dev = user("oye", 30, "programmer")
+const john = user("John", 20, "programmer")
+console.log(john.intro())
+console.log(dev.intro())
+
+//Challenges
+//
+
+const lib = {
+    sum: (a,b) => a + b,
+    mult: (a,b) =>  a * b
+    
+}
+console.log(lib.sum(3,6))
+console.log(lib.mult(3,6))
+
+
+// Default function parameters, introduced in ECMAScript 6(es6),\
+// allow you to assing default values to function parameters, when a function is called ,
+// and an argument is not provided for a parameter, the default value will be used instead .
+// this feature makes it easier to handle cases where arguments might be missing or undefined.
+
+function countTo5(count) {
+    if (count === true) {
+        for (let i = 1; i <= 5; i++) {
+            console.log(`Count: ${i}`)
+            }
+    }
+    
+}
+countTo5(true)
+
+
+function ratings(rate){
+    if(rate === 5) {
+        console.log(`High Ratings :)`)
+    }else if (rate === 0) {
+        console.log(`Low Ratings :(`)
+        
+    } else {
+        console.log(`Thanks for rating us :) `)
+    }
+
+}
+ratings(4);
+
+function multil(a, b = 1){
+    return a * b
+}
+console.log(multil(5))
+
+
+// The spread operator is a new addition to the set of operators in javaScript ES6.
+// It takes in an iterable (e.g an array) and expands it into individual elements.
+// The spread operator is commonly used to make me shallow copies of js Objects.
+// Using this is operator makes thhe code concise and enhances its readability.
+
+
+function giveMe4(a,b,c,d){
+    console.log("a",a)
+    console.log("b",b)
+    console.log("c",c)
+    console.log("d",d)
+
+}
+
+const colors = ['red', 'green', 'blue', 'purple']
+
+giveMe4(...colors)
+
+const strNums = ['one', 'two', 'three']
+const moreStrNums = ['four', 'five', 'six']
+
+const concat = [...strNums,...moreStrNums]
+console.log(concat);
+
+let peoples =['Dev','Web','Tex']
+const allPeps =["kamar", ...peoples, 'John',"Doe",'Kemi','WebDev']
+console.log(allPeps);
+
+
 

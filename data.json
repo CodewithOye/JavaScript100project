@@ -1,0 +1,22 @@
+
+
+
+{
+    "name":"John",
+    "age":30,
+    "isSubscribe":true,
+    "isMarried":true,
+    "children":null,
+    "cars":{
+        "car1":"BMW",
+        "car2":"Audi"
+    },
+    "pets":true,
+    "address":{
+        "street":"123 Main Street",
+        "city":"New York"
+
+
+    }
+
+}
