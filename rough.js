@@ -835,8 +835,8 @@ function user(name,age,work){
 
 const dev = user("oye", 30, "programmer")
 const john = user("John", 20, "programmer")
-console.log(john.intro())
-console.log(dev.intro())
+// console.log(john.intro())
+// console.log(dev.intro())
 
 //Challenges
 //
@@ -913,5 +913,88 @@ let peoples =['Dev','Web','Tex']
 const allPeps =["kamar", ...peoples, 'John',"Doe",'Kemi','WebDev']
 console.log(allPeps);
 
+const obj1 ={e: 1, f: 2};
+const obj2 = {g: 3, h: 4};
+const obj3 = {...obj1, ...obj2};
+
+console.log(obj3)
 
 
+
+let clPerson ={
+    name: 'Kamar',
+    age: 25,
+    gender:"male"
+}
+ const clone = {
+    ...clPerson,
+    work:'programmer'
+
+ }
+ console.log(clone)
+
+ // 
+
+ // The rest parameter syntax allows a function to accept an indefinite number of arguments.
+ // as an array , providing a way to represent a variadic functions in JavaScript.
+
+ function restParams(...userData){
+    console.log(userData)
+ }
+ restParams("Dev", 19 ,"Programmer");
+
+
+ function restParams(somethingelse,...userData){
+    console.log(somethingelse)
+    console.log(userData)
+ }
+ restParams("Dev", 19 ,"Programmer");
+
+ function fPerson(firstName,lastName, ...hobbies) {
+    console.log("First Name:", firstName)
+    console.log("Last Name:", lastName)
+    console.log("Hobbies:", hobbies)
+ }
+
+ fPerson("Dev", "Oye", "Programmer",40);
+
+
+
+ //Destructuring allows us to "unpack" values from data-structures(arrays,Object)
+ // into separate distinct variables.
+
+ const des = ['One',"two", 'three']
+//  console.log(des[0])
+//  console.log(des[1])
+//  console.log(des[2])
+const [one,two,three] = des;
+const [red,blue,green, yellow] = des;
+console.log(green)
+
+let y , z ;
+[y= 5, z = 30] = [1]
+console.log(y)
+
+function g(){
+    return [1,2]
+}
+let o, k;
+[o,k] = g()
+console.log(o)
+console.log(k)
+
+function r(){
+    return  [1,2,3];
+}
+
+const [p , , q] = r() // ignoring value in destructuring 
+console.log(p)
+console.log(q)
+
+
+// Assigning the rest of an array to a variable
+
+
+const [s, ...t] = ["One", "Two", "Three", "Four"];
+console.log(s);
+console.log(t)
