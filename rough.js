@@ -998,3 +998,65 @@ console.log(q)
 const [s, ...t] = ["One", "Two", "Three", "Four"];
 console.log(s);
 console.log(t)
+
+const student = {nameMe:"Dev", position: "SOC" , rollNo: 27 }
+const {nameMe, position, rollNo} = student;
+console.log(nameMe)
+console.log(position)
+console.log(rollNo)
+
+const objectPerson ={
+    name7: "Dev",
+    age: 27,
+    address: "Kolkata",
+    hobbies: ["cricket", "football", "reading"]
+    
+}
+
+// changing the name of the variable
+
+const {name7:you, age, address ,hobbies} = objectPerson
+console.log(objectPerson)
+console.log(you)
+
+//Object destructuring and rest operator
+
+let {bale, ronaldo , ...rest} = {
+    bale: "GK",
+    ronaldo: "FW",
+    messi: "MF",
+    neymar: "FW",
+    pique: "DF",
+    varane: "DF",
+    terstegen: "GK",
+    dembele: "MF",
+    pedri: "MF",
+    griezmann: "FW",
+}
+console.log(rest)
+
+
+// function destructuring 
+
+
+
+const newPerson ={
+    name: "Dev",
+    age: 27,
+    country: "USA"
+}
+
+function pringPersonInfo(){
+    const {name, age, country} = newPerson
+    console.log(`Name: ${name}`)
+    console.log(`Age: ${age}`)
+    console.log(`COuntry: ${country}`)
+}
+
+// Or 
+function pringPersonInfo({name, age, country}){
+    console.log(`Name: ${name}`)
+    console.log(`Age: ${age}`)
+    console.log(`COuntry: ${country}`)
+}
+pringPersonInfo(newPerson);
