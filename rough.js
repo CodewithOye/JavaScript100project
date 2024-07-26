@@ -1060,3 +1060,36 @@ function pringPersonInfo({name, age, country}){
     console.log(`COuntry: ${country}`)
 }
 pringPersonInfo(newPerson);
+
+
+
+
+// menu setup 
+
+let options= {
+    title: "My Menu",
+    items:["item1", 'item2']
+}
+
+function showMenu({title , width: w=100, height: h = 200,items:[item1,item2]}){
+    console.log(`${title} ${w} ${h}`)
+    console.log(item1)
+    console.log(item2)
+}
+
+showMenu(options)
+
+// nested destructuring
+
+const songs = [
+    {name: "Lucky you", singer:"Joyner", duration: 4.34},
+    {name: "Lucky me", singer:"Gabriel", duration: 2.34},
+    {name: "Lucky sir", singer:"Daniel", duration: 3.34},
+    {name: "Owld you", singer:"Joy", duration: 7.34},
+    {name: "Town you", singer:"Sender", duration: 1.34},
+    {name: "Drag you", singer:"Mark", duration: 4.34},
+];
+
+const [, , , {singer: v}] = songs
+
+console.log(v)
