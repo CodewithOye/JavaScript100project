@@ -1067,11 +1067,11 @@ pringPersonInfo(newPerson);
 // menu setup 
 
 let options= {
-    title: "My Menu",
+    // title: "My Menu",
     items:["item1", 'item2']
 }
 
-function showMenu({title , width: w=100, height: h = 200,items:[item1,item2]}){
+function showMenu({title ="Menu" , width: w=100, height: h = 200,items:[item1,item2]}){
     console.log(`${title} ${w} ${h}`)
     console.log(item1)
     console.log(item2)
@@ -1093,3 +1093,134 @@ const songs = [
 const [, , , {singer: v}] = songs
 
 console.log(v)
+
+const data = {
+    user: {
+        id: 123,
+        nameJohn: "John",
+        ageMe:40,
+        email: "johndoe@example.com",
+        address : {
+            street: "123 Main St",
+            city: "Anytown",
+            state: "CA",
+            zip: "12345",
+            },
+        hobbie: ["Reading","Painting", "Cooking"],
+        scores: {
+            math: 90,
+            science: 80,
+            history: 70,
+            },
+        },
+        products: [
+            {id: 1, name: "Laptop" , price: 1000},
+            {id: 2, name: "Phone" , price: 900},
+            {id: 3, name: "Tablet" , price: 500},
+        ],
+        settings: {
+            darkMode: true,
+            notifications: {
+                enabled: true,
+                frequency: "daily",
+                email: true,
+                sms: false,
+                push: true,
+            },
+            language: "English",
+
+        },
+    };
+
+     const {
+        user: { nameJohn, ageMe , address: { street, city, state, zip },
+        hobbie, 
+        scores: { math, science, history },
+        email,
+        },
+        products: [product1, product2 , product3],
+        settings: { 
+            darkMode, 
+            notifications: {
+                 frequency, 
+                 email: emailNotification,
+                 sms: smsNotification, 
+                 push: pushNotification
+                },
+                language,
+        }
+     } = data;
+     console.log(`Name: ${nameJohn}`)
+     console.log(`Age: ${ageMe}`)
+     console.log(`Address: ${street} ${city} ${state} ${zip}`)
+     console.log(`Hobbies: ${hobbie.join(",")}`)
+     console.log(`Math Score: ${math}`)
+     console.log(`Science Score: ${science}`)
+     console.log(`History Score: ${history}`)
+     console.log(`Products  1: ${product1.name} - $${product1.price}`)
+     console.log(`Products  2: ${product2.name} - $${product2.price}`)
+     console.log(`Products  1: ${product3.name} - $${product3.price}`)
+     console.log(`Dark Mode: ${darkMode}`)
+     console.log(`Email Notification: ${emailNotification}`)
+     console.log(`SMS Notification: ${smsNotification}`)
+     console.log(`Push Notification: ${pushNotification}`)
+     console.log(`Language: ${language}`)
+
+
+
+    //  The ternary operator is JavaScript is a concise way of writing conditional expressions
+    //. Its  the only JavaScript that takes three operands: a condition followed by a question Mark (?),
+    //An expression to execute if the contion is true, followed by a colon(:), and a expression to execute if the condition is false.
+
+    // condition ?  expressionIfTrue : expressionIfFalse;
+    //  The condition is evaluated, if it is true, the expressionIfTrue is evaluated and
+    //  returned. If the condition is false, the expressionIfFalse is evaluated and returned.
+
+    let passwordCheck = 5 ;
+    function passwordChecker(ps){
+        return ps >= 10 ? `Strong password ` : "Password should be 10 Character long";
+        // if (ps < 9) {
+        //     return "Password should be 10 characters or more";
+            
+        // }else {
+        //     return "Strong Password";
+    
+        // }
+        // return ps <=  10 ? `Password should be 10 characters or more`: "Strong Password";
+
+
+    }
+
+    const result = passwordChecker(25);
+    console.log(result); // Output: Password should be 10 characters or more
+
+
+    const ageMate = 27 
+
+    const isAdult = ageMate >= 18 ? "Adult" : "Not an Adult";
+    console.log(isAdult)
+
+
+    // The "for ...in" loop in JavaScript is used to iterate over the enimerable properties of an object . 
+    //It is a way to loop through the keys (property names) of an object.
+    // The syntax of the for...in loop is as follows:
+
+
+    let personObj = {
+        name: "John",
+        age: 30,
+        occupation: "Software Engineer"
+    }
+
+
+     for (keys in personObj) {
+        console.log(keys, personObj[keys])
+       
+    }
+
+    let list =["one","two","three"]
+    for (let i in list){
+        console.log(`${i}: ${list[i]}`)
+    }
+
+
